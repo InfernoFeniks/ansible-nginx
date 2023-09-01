@@ -1,8 +1,7 @@
 - name: Verify
   hosts: all
   gather_facts: false
-  vars:
-    vector_config_path: /etc/vector/vector.yaml
+  
   tasks:
     - name: Get Nginx version
       ansible.builtin.command: "nginx -v"
