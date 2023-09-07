@@ -3,7 +3,9 @@
   block:
     - name: Prepare on RedHat Family (YUM)
       ansible.builtin.yum:
-        name: sudo
+        name:
+          - sudo
+          - epel-release
         update_cache: true
       when: ansible_pkg_mgr == "yum"
 
